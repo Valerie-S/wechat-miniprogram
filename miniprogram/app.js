@@ -16,24 +16,31 @@ App({
       }
   
       this.globalData = {}
+
+      plugin.init({
+      // appid: "NMjVY8A5AXYrPAi2IQNXmkSeEvPqEt",
+      appid: "P5Ot9PHJDechCYqDFAW1AiK6OtG3Ja",
+      openid: "oB6jg6ENstneouhXefbujwJl7v2n", // 小程序的openid，必填项
+      guideList: [
+        "今天吃啥",
+        "陪我聊聊"
+      ],
+      userHeader: "", // 用户头像
+      userName: "", // 用户昵称
+      welcome: "Hello my friend",
+      anonymous: false, // 是否允许匿名用户登录，版本1.2.9后生效, 默认为false，设为ture时，未传递userName、userHeader两个字段时将弹出登录框
+      success: () => {},
+      fail: (error) => {},
+      });   
+
+      plugin.send({
+        query: "你好",
+        success: res => {
+          console.log(res);
+        },
+        fail: error => {}
+      });
     }
-  //   plugin.init({
-  //     // appid: "NMjVY8A5AXYrPAi2IQNXmkSeEvPqEt",
-  //     appid: "P5Ot9PHJDechCYqDFAW1AiK6OtG3Ja",
-  //     openid: "oB6jg6ENstneouhXefbujwJl7v2n", // 小程序的openid，必填项
-  //     userHeader: "", // 用户头像
-  //     userName: "", // 用户昵称
-  //     welcome: "Hello my friend",
-  //     anonymous: false, // 是否允许匿名用户登录，版本1.2.9后生效, 默认为false，设为ture时，未传递userName、userHeader两个字段时将弹出登录框
-  //     success: () => {},
-  //     fail: (error) => {},
-  // });   
-  // plugin.send({
-  //   query: "你好",
-  //   success: res => {
-  //     console.log(res);
-  //   },
-  //   fail: error => {}
-  // });
+  
   
 });

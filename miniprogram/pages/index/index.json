@@ -1,6 +1,12 @@
 {
-  "navigationBarTitleText": "聚合记录",
+  "navigationBarTitleText": "ClapTrap1号机",
   "usingComponents": {
-    "cloud-tip-modal": "/components/cloudTipModal/index"
+    "chat": "plugin://chatbot/chat",
+    "customTextMessage": "../../components/customTextMessage/customTextMessage",
+    "customWeatherMessage": "../../components/customWeatherMessage/customWeatherMessage",
+    "costomImageMessage": "../../components/costomImageMessage/costomImageMessage",
+    "customGuideCard": "../../components/customGuideCard/customGuideCard",
+    "customQuery": "../../components/customQuery/customQuery",
+    "customoperateCard": "../../components/customoperateCard/customoperateCard"
   }
 }
