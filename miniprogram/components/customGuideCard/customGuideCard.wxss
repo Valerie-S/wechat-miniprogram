@@ -22,9 +22,9 @@
   padding-top: 10px;
   padding-left: 10px;
   box-sizing: border-box;
-  /* position: absolute;
+  position: absolute;
   left: 15px;
-  bottom: 145px; */
+  bottom: 145px;
 }
 
 .swiperContent{
