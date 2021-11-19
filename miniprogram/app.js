@@ -43,7 +43,8 @@ App({
     },
   
     onLoad:function(){
-      this.globalData = {}
+      const chat = plugin.getChatComponent();
+      chat.clearChatRecord();
     }
-  
+    
 });

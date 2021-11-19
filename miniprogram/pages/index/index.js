@@ -8,6 +8,7 @@ Page({
     showUploadTip: false
   },
   onLoad: function () {
+
     wx.getSystemInfo({
       success: (res) => {
         // check if device is ios
@@ -26,9 +27,9 @@ Page({
         // } else {
         //   navHeight = 0
         // }
-        console.log('statusBarHeight: ' + res.statusBarHeight);
-        console.log('clientHeight: ' + clientHeight);
-        console.log('height: ' + height);
+        // console.log('statusBarHeight: ' + res.statusBarHeight);
+        // console.log('clientHeight: ' + clientHeight);
+        // console.log('height: ' + height);
 
         this.setData({
           status: res.statusBarHeight,
