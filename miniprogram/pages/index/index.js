@@ -13,15 +13,7 @@ Page({
       success: (res) => {
         // check if device is ios
         let isIOS = res.system.indexOf('iOS') > -1
-        // 获取可使用窗口宽度
-        let clientHeight = res.windowHeight;
-        // 获取可使用窗口高度
-        let clientWidth = res.windowWidth;
-        // 算出比例
-        let ratio = 750 / clientWidth;
-        // 算出高度(单位rpx)
-        let height = clientHeight * ratio;
-        let navHeight = 0
+        let navHeight = 0;
         // if (!isIOS) {
         //   navHeight = 0
         // } else {
@@ -34,6 +26,7 @@ Page({
         this.setData({
           status: res.statusBarHeight,
           navHeight: navHeight,
+          windowHeight: res.windowHeight,
           statusBarHeight: res.statusBarHeight + navHeight
         })
       }
