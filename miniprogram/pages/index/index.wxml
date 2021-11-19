@@ -1,8 +1,5 @@
 <!-- 自定义导航 -->
 <view style="width: 100vw; height: 100vh;overflow: hidden;">
-  <view class='nav-wrap' style='width: 100vw; height: {{statusBarHeight}}px;'>
-    <view class="" style="height: {{status}}px"></view>
-  </view>
   <view style="height: calc(100vh - {{statusBarHeight}}px);">
     <chat id="component-id" bind:queryCallback="getQueryCallback" bind:backHome="goBackHome"
       generic:textMessage="customTextMessage"

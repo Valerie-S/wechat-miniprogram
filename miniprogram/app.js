@@ -25,6 +25,7 @@ App({
         "今天吃啥",
         "陪我聊聊"
       ],
+      robotHeader: "https://static.wikia.nocookie.net/supersmashbrosfanon/images/9/9f/Claptrap.png",
       userHeader: "", // 用户头像
       userName: "", // 用户昵称
       welcome: "Hello my friend",
