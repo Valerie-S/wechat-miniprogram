@@ -40,7 +40,10 @@ App({
         },
         fail: error => {}
       });
-    }
+    },
   
+    onLoad:function(){
+      this.globalData = {}
+    }
   
 });

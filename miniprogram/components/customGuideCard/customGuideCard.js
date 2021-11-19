@@ -7,6 +7,7 @@ Component({
   },
   data: {
     guideIndex: -1,
+    visible: true,
     // guideList: data.getData().guideList,
     noContinuousClick: false //禁止连续点击
   },
@@ -27,6 +28,9 @@ Component({
     //事件响应函数
     chooseGuide: function (e) {
       if (this.properties.controlSwiper) {
+        this.setData({
+          visible: false
+        });
         this.setData(
           {
             guideIndex: e.currentTarget.dataset.id
