@@ -10,13 +10,26 @@ Page({
   onLoad: function () {
     wx.getSystemInfo({
       success: (res) => {
+        // check if device is ios
         let isIOS = res.system.indexOf('iOS') > -1
+        // 获取可使用窗口宽度
+        let clientHeight = res.windowHeight;
+        // 获取可使用窗口高度
+        let clientWidth = res.windowWidth;
+        // 算出比例
+        let ratio = 750 / clientWidth;
+        // 算出高度(单位rpx)
+        let height = clientHeight * ratio;
         let navHeight = 0
-        if (!isIOS) {
-          navHeight = 48
-        } else {
-          navHeight = 44
-        }
+        // if (!isIOS) {
+        //   navHeight = 0
+        // } else {
+        //   navHeight = 0
+        // }
+        console.log('statusBarHeight: ' + res.statusBarHeight);
+        console.log('clientHeight: ' + clientHeight);
+        console.log('height: ' + height);
+
         this.setData({
           status: res.statusBarHeight,
           navHeight: navHeight,
